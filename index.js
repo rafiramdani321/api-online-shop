@@ -15,7 +15,7 @@ import routerTrasaction from "./src/payment/transaction.route.js";
 import routerOrder from "./src/order/order.route.js";
 import compression from 'compression'
 
-export const app = express()
+const app = express()
 dotenv.config()
 
 // validation connect db
@@ -45,3 +45,5 @@ app.use('/api/order', routerOrder)
 // server
 const port = process.env.PORT
 app.listen(port, () => console.log(`Server running on port ${port}`))
+
+export default app;
