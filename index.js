@@ -31,10 +31,6 @@ app.use(fileUpload())
 app.use(express.static('public'))
 app.use(cookieParser())
 
-app.use("/", () => {
-  return "Hello World";
-});
-
 // setup routes
 app.use('/api/auth', routerAuth)
 app.use('/api/user', userRouter)
